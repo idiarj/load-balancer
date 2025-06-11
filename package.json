@@ -1,0 +1,22 @@
+{
+  "name": "load-balancer",
+  "version": "1.0.0",
+  "description": "Balanceador de Carga de microservicios, proyecto de la materia electiva Introduccion a sistemas distribuidos",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "node main.js",
+    "start": "node --watch server/server.js"
+  },
+  "keywords": [
+    "load-balancer",
+    "distribuidos"
+  ],
+  "author": "Idiar Chacin",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/proto-loader": "^0.7.15",
+    "express": "^5.1.0"
+  }
+}

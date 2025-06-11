@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package health;
+
+service HealthService {
+  rpc GetMetrics (Empty) returns (Metrics);
+}
+
+message Empty {}
+
+message Metrics {
+  float cpu = 1;           // Ej: 0.25 (25%)
+  float memusage = 2;      // Ej: 0.45 (45%)
+  int32 conns = 3;         // Conexiones activas
+}
