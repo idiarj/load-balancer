@@ -4,7 +4,18 @@ package user;
 
 service UserService {
   rpc GetUser (UserRequest) returns (UserResponse);
+  rpc GetMetrics (Empty) returns (Metrics);
 }
+
+
+message Empty {}
+
+message Metrics {
+  float cpu = 1;          
+  float memusage = 2;      
+  int32 conns = 3;
+}       
+
 
 message UserRequest {
   string id = 1;
