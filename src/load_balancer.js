@@ -19,7 +19,7 @@ export class LoadBalancer {
 
     const totalWeight = weights.cpu_usage + weights.memory_usage + weights.connections;
     if (Math.abs(totalWeight - 1.0) > 0.01) {
-      console.warn("⚠️  Las ponderaciones no suman 1.0. Por favor revisa configs/metrics.js");
+      console.warn("Las ponderaciones no suman 1.0. Por favor revisa configs/metrics.js");
     }
 
     this.startMonitoring();
@@ -101,7 +101,7 @@ export class LoadBalancer {
   }
 
   selectBestInstance(microserviceName) {
-    console.log('🔍 Balanceando para microservicio:', microserviceName);
+    console.log('Balanceando para microservicio:', microserviceName);
     const service = this.registry.find(s => s.microservice === microserviceName);
     if (!service) return null;
 

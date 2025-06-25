@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node main.js",
-    "start": "node --watch server/server.js"
+    "start": "node --watch gateway.js"
   },
   "keywords": [
     "load-balancer",

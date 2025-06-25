@@ -6,7 +6,7 @@ export const microservices = [{
         "port": "50051",
         "metrics": null
     },
-        {
+    {
         "ip": "localhost",
         "port": "50052",
         "metrics": null
@@ -14,6 +14,11 @@ export const microservices = [{
     {
         "ip": "localhost",
         "port": "50053",
+        "metrics": null
+    },
+    {
+        "ip": "localhost",
+        "port": "50054",
         "metrics": null
     }
     ]

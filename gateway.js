@@ -40,10 +40,9 @@ function findGrpcClient(proto, methodName) {
   return null;
 }
 
-// Ruta genérica para ejemplo: GET /users/:id
 app.get('/users/:id', (req, res) => {
-  const microserviceName = 'user';      // nombre base del proto: user.proto
-  const methodName = 'GetUser';         // nombre del método gRPC
+  const microserviceName = 'user';      
+  const methodName = 'GetUser';        
 
   const bestInstance = balancer.selectBestInstance(microserviceName);
   if (!bestInstance) {
